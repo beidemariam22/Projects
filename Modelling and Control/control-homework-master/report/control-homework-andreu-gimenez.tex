@@ -1,0 +1,82 @@
+% !TeX root = ./control-homework-andreu-gimenez.tex
+\documentclass[12pt]{src/stem-report}
+
+%% Import additional packages and header definitions
+% For the LaTex newbies, \input let's you introduce a .tex file as if it were
+% part of the current file
+\input{src/packages}
+
+
+%% Macros and colour definitions.
+\input{src/macros.tex}
+\input{src/colors.tex}
+
+% *****************************************************************************
+%                     Report configuration: Tweak this
+% *****************************************************************************
+%% Developer and debug options
+% \overfullrule=5pt % Un-comment this to show a black bar by overfull hboxes.
+
+%% Bibliography
+% Be careful with reference files list, always avoid whitespaces!
+\addbibresource{bibliography/references.bib}
+
+%% Title parameters
+\title{EMOMA - Homework 2}
+% \subtitle{So great it needs a second line} % Can be commented out
+\author{
+  Gimenez Bolinches, Andreu \\
+  \textit{esdandreu@gmail.com} \\
+}
+\date{\today}
+\IfFileExists{./abstract.tex}{
+  \abstract{\input{abstract.tex}}
+}
+
+\begin{document}
+  % ***************************************************************************
+  %                              Front Page
+  % ***************************************************************************
+  \hypersetup{linkcolor=black}
+
+  %% Build title 
+  \maketitle
+
+  \begin{center}
+    \href{https://gitlab.com/jemaro/wut/modelling-and-control-of-manipulators/control-homework}{Source code}
+  \end{center}
+  \clearpage
+
+  \tableofcontents
+  \clearpage
+
+  % \listoffigures
+  % \listoftables
+  % \clearpage
+
+  % ***************************************************************************
+  %                              Main Content
+  % ***************************************************************************
+  \hypersetup{linkcolor=documentLinkColor}
+  \input{content.tex}
+
+  % ***************************************************************************
+  %                              Appendices
+  % ***************************************************************************
+  \IfFileExists{./appendices.tex}{
+    \appendix
+    \input{appendices}
+    \unappendix
+    \clearpage
+  }
+
+  % ***************************************************************************
+  %                              Bibliography
+  % ***************************************************************************
+  \singlespace
+  \printbibliography[%
+    % heading=bibintoc,%
+    title={References}%
+  ]
+
+\end{document}

@@ -1,0 +1,38 @@
+%% Bibliography packages recommended for biblatex
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{comment}
+\usepackage{csquotes}
+\usepackage[
+    style=numeric,
+    sorting=ynt
+]{biblatex}
+
+%% Essential packages
+% Diagrams and \foreach
+\usepackage{tikz}
+% Subfigures
+\usepackage{caption}
+\usepackage[list=true,listformat=simple]{subcaption}
+% File system
+% https://ftp.gust.org.pl/TeX/macros/latex/contrib/currfile/currfile.pdf
+\usepackage{currfile}
+\usepackage{pdfcomment}
+
+% TODO should be empty for a template, the .cls file should be standalone
+\usepackage[cmex10]{amsmath}
+\usepackage{amsfonts}
+\usepackage{setspace}
+\usepackage{layout}
+% \usepackage[subfigure]{tocloft}  % Set TOC options.
+
+% \usepackage[format=hang]{subfig}  % Do not include caption package in here.
+\usepackage{algorithm}
+\usepackage{algpseudocode} % algorithmicx
+\usepackage{ctable}
+\usepackage{multirow}
+
+% ``float'' algorithms
+\usepackage{float}
+\newfloat{algorithm}{tbp}{lop}
