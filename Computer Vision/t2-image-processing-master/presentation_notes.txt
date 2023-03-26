@@ -1,0 +1,7 @@
+If we want to segment by colour, which colour space should we select?
+HSV is very comfortable because we can filter by colour and get all its 
+saturation and contrast.
+Be careful with Open masks because they can change the corners of the objects
+and even change its continuity.
+For every circle it should be pi*r^2/(2*pi*r)^2 = 1/(4 pi) = area/perimeter
+The bigger the eccentricity the more elongated. The lower, the rounder.

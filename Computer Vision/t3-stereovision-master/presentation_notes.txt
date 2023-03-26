@@ -1,0 +1,17 @@
+At a given distance, there is a given disparity
+The closer to the camera, the bigger the disparity
+Disparity can be zero if the object is far enough (Infinity)
+There is a minimal distance for the object to be visible on both cameras. The
+object can be out of the field of view of one of the cameras. The difference in
+the field of view depends on the focal length "f" and the baseline between the
+cameras "b". The lower the focal length the bigger the field of view but the
+trade-off is lower maximum distance to sense (the camera range).
+The algorithm assumes that the same points in both images lay on the same 
+horizontal lines in both images -> Stereo rectification.
+Checkerboard size is 40mm.
+In stereo calibration, the error is usually bigger than in mono calibration.
+After the rectification, both of the images get smaller.
+Tune parameters for disparity function -> "dispRange" = [64, 160]; (Rule of 
+thumb, divisible by 16). It should work in every image of the dataset.
+Measuring horizontal features is difficult.
+Single script solution.

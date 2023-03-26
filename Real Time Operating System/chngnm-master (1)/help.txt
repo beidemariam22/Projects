@@ -1,0 +1,35 @@
+usage: chngnm [-r|--recursive] [-s|--subdirectories] [-l|--lowercase|-u|-uppercase|-c|--capitalize] <dir/file names...> 
+
+Change names of files and directories. Lowercasing, uppercasing or capitalizing
+file and directory names either with recursion or without it.
+
+mandatory arguments:
+    renaming mode: Only one of the following arguments must be present.
+    
+        -l, --lowercase    Changes element names to lower case
+
+        -u, --uppercase    Changes element names to upper case
+
+       -c, --capitalize    Changes the first letter of the element name to
+                           upper case
+    
+    <dir/file names...>    Names of files or directories, multiple arguments 
+                           accepted.
+
+optional arguments:
+    -r, --recursive        Allows recursion. Which means that the elements
+                           situated inside subdirectories of an input directory
+                           will be affected. Specifying a directory as an input
+                           without the "recursive" or "subdirectories" optional
+                           argument will not change rename that directory
+
+    -s, --subdirectories   Directory names are valid elements for renaming.
+                           When recursion is allowed this implies that changes
+                           will affect not only to regular file names but to
+                           subdirectories. When recursion is not allowed, this
+                           means that one can directly specify a directory to
+                           be renamed. When this option is not specified,
+                           directories will not be renamed
+
+    -v, --verbose          Displays a message for each element renamed during
+                           the execution

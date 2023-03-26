@@ -1,0 +1,18 @@
+points_in and points_out can have different shapes depending on how we compute
+the homography.
+Green coordinates are the logical coordinates used inside the homography.
+The purple coordinates are pixels
+Crop image is another function we need to implement, but we do have the
+reference information.
+Point selection order is important. We could sort the points after selecting?
+Sorting algorithm, find middle point and divide the points in quadrants.
+In points_out you put the desired coordinates for your input points to be transformed.
+
+When merging images, use a perfect rectangle as points_out for both images.
+The size of the rectangle can be estimated from the points_in of the first
+image.
+
+In an homography based in 4 points, a single pixel difference in that points
+makes a big difference on the output.
+
+Two scripts and two functions (calculate_homography and crop_image).

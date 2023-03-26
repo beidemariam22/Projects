@@ -1,0 +1,9 @@
+eat() is only a message
+
+integrate variable of type semaphore -> Shared memory
+
+"state" should be shared memory
+
+think() is only sleeping
+
+I spent two hours with this bug. All the semaphores should be initialized to 0, except the mutex one which should be initialized to 1.

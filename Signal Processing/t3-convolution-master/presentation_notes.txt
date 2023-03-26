@@ -1,0 +1,17 @@
+The central element of the convolution is this point where we
+put the result
+Output of convolution of two 3x3 matrices is bigger than the inputs
+Convolution kernels are usually odd sized in order to easily distinguish the 
+central points
+Image processing usually uses "same" option of Matlab's conv function
+Conv uses zero-padded edges but signal repetition might be a better assumption
+for edges in signal processing
+If the sum of the elements in the mask is greater than 1 it means that the
+output signal will be multiplied by the sum of the mask.
+Zero-padded edges makes the convolved signal have lower values than the
+original signal in the edges even if the convolution kernel is normalized
+Kernels with sum=0 are edge detectors
+Main file with different files for tasks as functions
+High frequencies leak through the box filter and distort the signal.
+Asymmetrical box filter kernel leads to a motion blur effect if applied to an
+image

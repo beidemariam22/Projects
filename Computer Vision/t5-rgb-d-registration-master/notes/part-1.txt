@@ -1,0 +1,3 @@
+Match using descriptors
+RANSAC takes care of the outlier matches. Pick random set of points, make
+transformation, check error of everyone. If the error is too bad, repeat.
